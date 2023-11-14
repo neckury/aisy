@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int num1, num2;
+
+    if (scanf("%d %d", &num1, &num2) != 2) {
+        printf("n/a");
+        return 0;
+    }
+
+    int sumOfSquares = num1 * num1 + num2 * num2;
+    int squareOfSum = (num1 + num2) * (num1 + num2);
+
+    if (sumOfSquares > squareOfSum) {
+        printf("Сумма квадратов больше: %d\n", sumOfSquares);
+    } else if (sumOfSquares < squareOfSum) {
+        printf("Квадрат суммы больше: %d\n", squareOfSum);
+    } else {
+        printf("Сумма квадратов равна квадрату суммы: %d\n", sumOfSquares);
+    }
+
+    return 0;
+}
