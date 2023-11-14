@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int compare(int a, int b) {
+    if (a > b) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main() {
+    int a, b;
+
+    printf("Введите два целых числа a и b: ");
+    if (scanf("%d %d", &a, &b) == 2) {
+        int result = compare(a, b);
+        printf("Результат сравнения: %d\n", result);
+    } else {
+        printf("Ошибка: введите два целых числа.\n");
+    }
+
+    return 0;
+}
