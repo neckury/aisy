@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int gcd(int x, int y) {
+    while (y != 0) {
+        int temp = y;
+        y = x % y;
+        x = temp;
+    }
+    return x;
+}
+
+int lcm(int x, int y) {
+    return (x * y) / gcd(x, y);
+}
+
+int main() {
+    int x, y;
+
+    printf("Введите два целых числа: ");
+    if (scanf("%d %d", &x, &y) == 2) {
+        int result = lcm(x, y);
+        printf("НОК(%d, %d) = %d\n", x, y, result);
+    } else {
+        printf("Ошибка: введите два целых числа.\n");
+    }
+
+    return 0;
+}
